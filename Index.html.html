@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/HP/Downloads/codigo-anticaos-links.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Código AntiCaos — Links</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./Código AntiCaos — Links_files/css2" rel="stylesheet">
+<style>
+
+/* ══════════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --dark:       #06070f;
+  --dark-2:     #0c0e1c;
+  --dark-3:     #12142a;
+  --cream:      #f5f2ec;
+  --cream-dim:  rgba(245,242,236,0.65);
+  --cream-faint:rgba(245,242,236,0.35);
+
+  /* volume accents */
+  --gold:       #c9a84c;
+  --gold-glow:  rgba(201,168,76,0.18);
+  --lavender:   #8b6fd4;
+  --lavender-glow: rgba(139,111,212,0.18);
+  --emerald:    #4a9e6b;
+  --emerald-glow: rgba(74,158,107,0.18);
+  --amber:      #e8a030;
+  --amber-glow: rgba(232,160,48,0.18);
+  --steel:      #4a6fa5;
+  --steel-glow: rgba(74,111,165,0.18);
+  --combo:      #c9a84c;
+  --combo-glow: rgba(201,168,76,0.22);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--dark);
+  color: var(--cream);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ══════════════════════════════════════════
+   BACKGROUND — STARS + GRID
+══════════════════════════════════════════ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 100% 60% at 50% 0%, rgba(139,111,212,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(74,111,165,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 50% at 0% 60%, rgba(74,158,107,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(201,168,76,0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(139,111,212,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139,111,212,0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ══════════════════════════════════════════
+   LAYOUT WRAPPER
+══════════════════════════════════════════ */
+.wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 52px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* ══════════════════════════════════════════
+   HEADER — AVATAR + NAME + BIO
+══════════════════════════════════════════ */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeUp 0.7s ease both;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  background: linear-gradient(135deg, var(--dark-2), var(--dark-3));
+  border: 1px solid rgba(201,168,76,0.3);
+  box-shadow: 0 0 0 4px rgba(201,168,76,0.08), 0 0 40px rgba(201,168,76,0.1);
+}
+
+/* ── TROQUE O EMOJI PELO SEU LOGO ──
+   Veja a seção "Como Personalizar" no final */
+.avatar::after {
+  content: '✦';
+  font-size: 32px;
+  color: var(--gold);
+  text-shadow: 0 0 20px rgba(201,168,76,0.5);
+}
+
+.header-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+.header-handle {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.header-bio {
+  font-size: 13.5px;
+  font-weight: 300;
+  color: var(--cream-dim);
+  line-height: 1.75;
+  max-width: 340px;
+}
+
+/* ══════════════════════════════════════════
+   SECTION LABEL
+══════════════════════════════════════════ */
+.section-label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  margin-top: 32px;
+}
+.section-label:first-of-type { margin-top: 0; }
+.section-label span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+  white-space: nowrap;
+}
+.section-label::before,
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(245,242,236,0.1);
+}
+
+/* ══════════════════════════════════════════
+   LINK CARDS — VOLUMES
+══════════════════════════════════════════ */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  background: rgba(12,14,28,0.85);
+  border: 1px solid rgba(245,242,236,0.07);
+  backdrop-filter: blur(12px);
+  animation: fadeUp 0.6s ease both;
+}
+
+.link-card:nth-child(1) { animation-delay: 0.08s; }
+.link-card:nth-child(2) { animation-delay: 0.14s; }
+.link-card:nth-child(3) { animation-delay: 0.20s; }
+.link-card:nth-child(4) { animation-delay: 0.26s; }
+.link-card:nth-child(5) { animation-delay: 0.32s; }
+
+.link-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  border-radius: 14px;
+}
+.link-card:hover { transform: translateY(-2px); }
+.link-card:hover::before { opacity: 1; }
+.link-card:active { transform: translateY(0px) scale(0.99); }
+
+/* per-volume glow on hover */
+.v1::before { background: var(--gold-glow); }
+.v1:hover   { border-color: rgba(201,168,76,0.35); box-shadow: 0 8px 32px rgba(201,168,76,0.12); }
+.v2::before { background: var(--lavender-glow); }
+.v2:hover   { border-color: rgba(139,111,212,0.35); box-shadow: 0 8px 32px rgba(139,111,212,0.12); }
+.v3::before { background: var(--emerald-glow); }
+.v3:hover   { border-color: rgba(74,158,107,0.35); box-shadow: 0 8px 32px rgba(74,158,107,0.12); }
+.v4::before { background: var(--amber-glow); }
+.v4:hover   { border-color: rgba(232,160,48,0.35); box-shadow: 0 8px 32px rgba(232,160,48,0.12); }
+.v5::before { background: var(--steel-glow); }
+.v5:hover   { border-color: rgba(74,111,165,0.35); box-shadow: 0 8px 32px rgba(74,111,165,0.12); }
+
+/* ── ICON BADGE ── */
+.card-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.v1 .card-icon { background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.25); }
+.v2 .card-icon { background: rgba(139,111,212,0.12); border: 1px solid rgba(139,111,212,0.25); }
+.v3 .card-icon { background: rgba(74,158,107,0.12); border: 1px solid rgba(74,158,107,0.25); }
+.v4 .card-icon { background: rgba(232,160,48,0.12); border: 1px solid rgba(232,160,48,0.25); }
+.v5 .card-icon { background: rgba(74,111,165,0.12); border: 1px solid rgba(74,111,165,0.25); }
+
+/* ── TEXT ── */
+.card-text {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+.card-vol {
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.v1 .card-vol { color: var(--gold); }
+.v2 .card-vol { color: var(--lavender); }
+.v3 .card-vol { color: var(--emerald); }
+.v4 .card-vol { color: var(--amber); }
+.v5 .card-vol { color: var(--steel); }
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+.card-sub {
+  font-size: 11.5px;
+  font-weight: 300;
+  color: var(--cream-dim);
+  line-height: 1.4;
+}
+
+/* ── PRICE BADGE ── */
+.card-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  font-weight: 700;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.v1 .card-price { color: var(--gold); }
+.v2 .card-price { color: var(--lavender); }
+.v3 .card-price { color: var(--emerald); }
+.v4 .card-price { color: var(--amber); }
+.v5 .card-price { color: var(--steel); }
+
+/* ── ARROW ── */
+.card-arrow {
+  font-size: 16px;
+  color: var(--cream-faint);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.link-card:hover .card-arrow {
+  transform: translateX(3px);
+  color: var(--cream-dim);
+}
+
+/* ══════════════════════════════════════════
+   COMBO CARD — DESTAQUE ESPECIAL
+══════════════════════════════════════════ */
+.combo-card {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fadeUp 0.7s ease 0.38s both;
+}
+.combo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(201,168,76,0.2);
+}
+.combo-card:active { transform: scale(0.99); }
+
+.combo-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0e0c1a 0%, #140f06 100%);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 16px;
+}
+.combo-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(201,168,76,0.08) 0%, transparent 60%);
+  border-radius: 16px;
+}
+
+.combo-inner {
+  position: relative;
+  z-index: 1;
+  padding: 24px 22px 22px;
+}
+
+.combo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 100px;
+  padding: 4px 12px;
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.combo-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.combo-title span { color: var(--gold); }
+
+.combo-sub {
+  font-size: 12.5px;
+  font-weight: 300;
+  color: var(--cream-dim);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* ── 5 COLOR DOTS (volumes) ── */
+.combo-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.combo-dot {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  font-weight: 400;
+  color: var(--cream-dim);
+}
+.combo-dot-circle {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.combo-sep { color: rgba(245,242,236,0.2); font-size: 10px; }
+
+.combo-pricing {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.combo-old {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--cream-faint);
+  text-decoration: line-through;
+  margin-bottom: 2px;
+}
+.combo-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.combo-discount {
+  background: rgba(201,168,76,0.2);
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+
+.combo-cta {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(201,168,76,0.9), rgba(232,160,48,0.85));
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #06070f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+.combo-cta:hover { opacity: 0.92; }
+
+/* ══════════════════════════════════════════
+   DIVIDER
+══════════════════════════════════════════ */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245,242,236,0.1) 30%, rgba(245,242,236,0.1) 70%, transparent);
+  margin: 36px 0 28px;
+}
+
+/* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+.footer {
+  text-align: center;
+  animation: fadeUp 0.6s ease 0.5s both;
+}
+.footer-series {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.footer-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+}
+.footer-text {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+  margin-bottom: 6px;
+}
+.footer-ig {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.6);
+}
+
+/* ══════════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════════
+   MOBILE POLISH
+══════════════════════════════════════════ */
+@media (max-width: 420px) {
+  .wrapper { padding: 40px 16px 52px; }
+  .combo-title { font-size: 18px; }
+  .combo-price { font-size: 28px; }
+  .card-title { font-size: 14px; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- ══ HEADER ══════════════════════════════ -->
+  <header class="header">
+    <div class="avatar"></div>
+    <!-- ✏️ EDITAR: mude o nome abaixo -->
+    <div class="header-name">Código AntiCaos</div>
+    <!-- ✏️ EDITAR: mude o @ abaixo -->
+    <div class="header-handle">@Codigo_AntiCaos</div>
+    <!-- ✏️ EDITAR: mude a bio abaixo -->
+    <p class="header-bio">
+      5 eixos. Uma vida que funciona em todas as direções.<br>
+      Relacionamentos · Espiritualidade · Saúde · Finanças · Carreira
+    </p>
+  </header>
+
+  <!-- ══ VOLUMES INDIVIDUAIS ════════════════ -->
+  <div class="section-label"><span>Os 5 Volumes</span></div>
+
+  <div class="links">
+
+    <!-- ✏️ EDITAR: substitua href="#" pelo link real de cada volume -->
+
+    <a href="https://pay.kiwify.com.br/6ey0eao" class="link-card v1" target="_blank" rel="noopener">
+      <div class="card-icon">✦</div>
+      <div class="card-text">
+        <div class="card-vol">Volume I</div>
+        <div class="card-title">Relacionamentos</div>
+        <div class="card-sub">Dominando Relacionamentos</div>
+      </div>
+      <!-- ✏️ EDITAR: mude o preço abaixo -->
+      <div class="card-price">R$ 19,90</div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a href="https://pay.kiwify.com.br/2LFmx0t" class="link-card v2" target="_blank" rel="noopener">
+      <div class="card-icon">✶</div>
+      <div class="card-text">
+        <div class="card-vol">Volume II</div>
+        <div class="card-title">Espiritualidade</div>
+        <div class="card-sub">Desperte o Que Você Já É</div>
+      </div>
+      <div class="card-price">R$ 17,90</div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a href="https://pay.kiwify.com.br/Igcv2oM" class="link-card v3" target="_blank" rel="noopener">
+      <div class="card-icon">♥</div>
+      <div class="card-text">
+        <div class="card-vol">Volume III</div>
+        <div class="card-title">Saúde</div>
+        <div class="card-sub">O Corpo Não Mente</div>
+      </div>
+      <div class="card-price">R$ 17,90</div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a href="https://pay.kiwify.com.br/1Uxc6gp" class="link-card v4" target="_blank" rel="noopener">
+      <div class="card-icon">◈</div>
+      <div class="card-text">
+        <div class="card-vol">Volume IV</div>
+        <div class="card-title">Prosperidade Financeira</div>
+        <div class="card-sub">Sua Cabeça Está te Deixando Pobre</div>
+      </div>
+      <div class="card-price">R$ 19,90</div>
+      <div class="card-arrow">›</div>
+    </a>
+
+    <a href="https://pay.kiwify.com.br/KL6MMs1" class="link-card v5" target="_blank" rel="noopener">
+      <div class="card-icon">★</div>
+      <div class="card-text">
+        <div class="card-vol">Volume V</div>
+        <div class="card-title">Profissional</div>
+        <div class="card-sub">A Versão Profissional Que Você Ainda Não É</div>
+      </div>
+      <div class="card-price">R$ 19,90</div>
+      <div class="card-arrow">›</div>
+    </a>
+
+  </div>
+
+  <!-- ══ COMBO ═══════════════════════════════ -->
+  <div class="section-label" style="margin-top:28px;"><span>Melhor Oferta</span></div>
+
+  <!-- ✏️ EDITAR: substitua href="#" pelo link do combo -->
+  <a href="https://pay.kiwify.com.br/JKHqSEG" class="combo-card" target="_blank" rel="noopener">
+    <div class="combo-bg"></div>
+    <div class="combo-inner">
+
+      <div class="combo-badge">⭐ Oferta Especial · Série Completa</div>
+
+      <div class="combo-title">Box Código AntiCaos<br><span>— 5 Volumes Completos</span></div>
+
+      <p class="combo-sub">
+        Todos os 5 eixos. 105 capítulos. Um sistema completo
+        para transformar relacionamentos, espiritualidade, saúde,
+        finanças e carreira — ao mesmo tempo.
+      </p>
+
+      <div class="combo-dots">
+        <div class="combo-dot">
+          <div class="combo-dot-circle" style="background:var(--gold);"></div>
+          Rel.
+        </div>
+        <div class="combo-sep">·</div>
+        <div class="combo-dot">
+          <div class="combo-dot-circle" style="background:var(--lavender);"></div>
+          Esp.
+        </div>
+        <div class="combo-sep">·</div>
+        <div class="combo-dot">
+          <div class="combo-dot-circle" style="background:var(--emerald);"></div>
+          Saúde
+        </div>
+        <div class="combo-sep">·</div>
+        <div class="combo-dot">
+          <div class="combo-dot-circle" style="background:var(--amber);"></div>
+          Fin.
+        </div>
+        <div class="combo-sep">·</div>
+        <div class="combo-dot">
+          <div class="combo-dot-circle" style="background:var(--steel);"></div>
+          Prof.
+        </div>
+      </div>
+
+      <div class="combo-pricing">
+        <div>
+          <!-- ✏️ EDITAR: mude o preço riscado abaixo -->
+          <div class="combo-old">de R$ 95,50</div>
+          <!-- ✏️ EDITAR: mude o preço final abaixo -->
+          <div class="combo-price">R$ 47,90</div>
+        </div>
+        <div class="combo-discount">+ de 50% OFF</div>
+      </div>
+
+      <div class="combo-cta">
+        Quero o Box Completo &nbsp;→
+      </div>
+
+    </div>
+  </a>
+
+  <!-- ══ DIVIDER ═════════════════════════════ -->
+  <div class="divider"></div>
+
+  <!-- ══ FOOTER ══════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-series">
+      <div class="footer-dot" style="background:var(--gold);"></div>
+      <div class="footer-dot" style="background:var(--lavender);"></div>
+      <div class="footer-dot" style="background:var(--emerald);"></div>
+      <div class="footer-dot" style="background:var(--amber);"></div>
+      <div class="footer-dot" style="background:var(--steel);"></div>
+    </div>
+    <div class="footer-text">Código AntiCaos · Série Completa</div>
+    <!-- ✏️ EDITAR: mude o @ abaixo -->
+    <div class="footer-ig">@Codigo_AntiCaos</div>
+  </footer>
+
+</div>
+
+
+</body></html>
